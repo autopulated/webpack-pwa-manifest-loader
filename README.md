@@ -1,5 +1,7 @@
 # pwa-manifest-loader for webpack
 
+[![test](https://github.com/autopulated/webpack-pwa-manifest-loader/actions/workflows/test.yml/badge.svg)](https://github.com/autopulated/webpack-pwa-manifest-loader/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/autopulated/webpack-pwa-manifest-loader/badge.svg?branch=main)](https://coveralls.io/github/autopulated/webpack-pwa-manifest-loader?branch=main)
 [![NPM Version](https://img.shields.io/npm/v/pwa-manifest-loader?style=flat)](https://www.npmjs.com/package/pwa-manifest-loader)
 
 
