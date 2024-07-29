@@ -10,10 +10,6 @@ export default (fixture, options = {}) => {
   const compiler = webpack({
     context: dirname,
     entry: `./${fixture}`,
-    output: {
-      path: path.resolve(dirname),
-      filename: 'bundle.js',
-    },
     module: {
       rules: [
         {

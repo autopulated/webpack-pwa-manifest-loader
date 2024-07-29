@@ -10,7 +10,10 @@
   "jest": {
     "testEnvironment": "node",
     "transform": {},
-    "testMatch": ["**/__tests__/**/*.([tj]s|mjs)?(x)", "**/?(*.)+(spec|test).([tj]s|mjs)?(x)"]
+    "testMatch": [
+      "**/__tests__/**/*.([tj]s|mjs)?(x)",
+      "**/?(*.)+(spec|test).([tj]s|mjs)?(x)"
+    ]
   },
   "repository": {
     "type": "git",
@@ -36,6 +39,7 @@
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "eslint": "^9.8.0",
+    "eslint-plugin-jest": "^28.6.0",
     "globals": "^15.8.0",
     "jest": "^29.7.0",
     "memfs": "^4.11.0",

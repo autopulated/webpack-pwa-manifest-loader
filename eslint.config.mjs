@@ -1,6 +1,6 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
-
+import jest from 'eslint-plugin-jest';
 
 export default [
   {files: ['**/*.js'], languageOptions: {sourceType: 'script'}},
@@ -20,5 +20,10 @@ export default [
         'brace-style': [1, '1tbs', {'allowSingleLine': true}],
         'quotes': [1, 'single', { 'avoidEscape': true }]
       }
+  },
+  {
+    ...jest.configs['flat/recommended'],
+    files: ['test/**.js', 'test/**.mjs'],
   }
 ];
+
