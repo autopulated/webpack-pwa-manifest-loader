@@ -1,0 +1,33 @@
+{
+  "name": "pwa-manifest-loader",
+  "version": "1.0.0",
+  "description": "Progressive Web App manifest.json / app.webmenifest loader for webpack.",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint -c eslint.config.mjs './{,!(node_modules)/**/}*.mjs'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/autopulated/webpack-pwa-manifest-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "pwa",
+    "manifest",
+    "webmanifest",
+    "manifest.json"
+  ],
+  "author": "James Crosby <3456211+autopulated@users.noreply.github.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/autopulated/webpack-pwa-manifest-loader/issues"
+  },
+  "homepage": "https://github.com/autopulated/webpack-pwa-manifest-loader#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "eslint": "^9.8.0",
+    "globals": "^15.8.0"
+  }
+}
