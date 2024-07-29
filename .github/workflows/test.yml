@@ -24,9 +24,9 @@ jobs:
         run: npm run-script lint
 
       - name: test
-        run: npm run-script test
+        run: npm run-script test -- --coverage
 
       - name: Coveralls
         uses: coverallsapp/github-action@v2
         with:
-          files: .tap/report/lcov.info
+          files: coverage/lcov.info
