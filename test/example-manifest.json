@@ -20,5 +20,14 @@
       "sizes": "any",
       "purpose": "any"
     }
+  ],
+  "screenshots" : [
+    {
+      "src": "./img/screen.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "An app screenshot"
+    }
   ]
 }

@@ -35,7 +35,7 @@ module.exports = {
   module: {
     rules: [
       {
-        // use pwa-manifest-loader for manifest.json, or app.webmanifest so we can interpret icon URLs.
+        // use pwa-manifest-loader for manifest.json, or app.webmanifest so icons get loaded
         test: /manifest.json$\|.webmanifest$/,
         use: 'pwa-manifest-loader'
       },

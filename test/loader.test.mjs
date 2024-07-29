@@ -10,6 +10,8 @@ test('Outputs valid data', async () => {
     expect(parsed.icons[0].src).toMatch(/^\/some-publicpath\/[a-f0-9]*\.png$/);
     expect(parsed.icons[1].src).toMatch(/^\/some-publicpath\/[a-f0-9]*\.png$/);
     expect(parsed.icons[2].src).toMatch(/^\/some-publicpath\/[a-f0-9]*\.svg$/);
+
+    expect(parsed.screenshots[0].src).toMatch(/^\/some-publicpath\/[a-f0-9]*\.png$/);
 });
 
 
