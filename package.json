@@ -5,7 +5,7 @@
   "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint -c eslint.config.mjs './{,!(node_modules)/**/}*.mjs'"
+    "lint": "eslint -c eslint.config.mjs './{,!(node_modules)/**/}*.mjs'"
   },
   "repository": {
     "type": "git",
