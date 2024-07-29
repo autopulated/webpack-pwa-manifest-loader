@@ -1,0 +1,24 @@
+{
+  "name": "MyApp",
+  "short_name": "MyApp",
+  "description": "App description etc.",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./img/icon-72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "./img/icon-180.png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "./img/icon-svg.svg",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}
