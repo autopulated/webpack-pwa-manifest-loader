@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/autopulated/webpack-pwa-manifest-loader.git"
   },
+  "files": [
+    "index.mjs"
+  ],
   "keywords": [
     "webpack",
     "loader",
