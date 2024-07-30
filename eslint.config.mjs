@@ -24,6 +24,9 @@ export default [
   {
     ...jest.configs['flat/recommended'],
     files: ['test/**.js', 'test/**.mjs'],
+    rules: {
+        'no-conditional-expect': 0
+    }
   }
 ];
 

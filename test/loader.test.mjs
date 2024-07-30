@@ -14,4 +14,25 @@ test('Outputs valid data', async () => {
     expect(parsed.screenshots[0].src).toEqual('/some-publicpath/screen-processed.png');
 });
 
+test('Invalid manifest', async () => {
+    const resultPromise = compiler('malformed-manifest.json', { });
+
+    expect.assertions(3);
+    await resultPromise.catch((errors) => {
+        expect(errors).toHaveLength(1);
+        expect(errors[0].message).toMatch(/^Module build failed/);
+        expect(errors[0].message).toMatch(/SyntaxError: Expected property name or '}' in JSON at position 6/);
+    });
+});
+
+test('Missing resources', async () => {
+    const resultPromise = compiler('srcmissing-manifest.json', { });
+
+    expect.assertions(3);
+    await resultPromise.catch((errors) => {
+        expect(errors).toHaveLength(2);
+        expect(errors[0].message).toMatch(/^Module not found: Error: Can't resolve/);
+        expect(errors[0].loc).toMatch(/missing\.png$/);
+    });
+});
 
