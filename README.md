@@ -103,3 +103,9 @@ Apache-2.0
 
 ## Bugs etc?
 Open a github issue please :)
+
+## My PWAs that use this
+ * [DailyCodeword](https://dailycodeword.com): progressive web app for daily codeword puzzles.
+ * [Summably](https://summably.com): daily number puzzle
+
+
