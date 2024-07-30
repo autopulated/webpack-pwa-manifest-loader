@@ -26,7 +26,8 @@ export default (fixture, options = {}) => {
       ],
     },
     output: {
-        publicPath: '/some-publicpath/'
+        publicPath: '/some-publicpath/',
+        assetModuleFilename: '[name]-processed[ext][query]',
     }
   });
 

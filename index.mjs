@@ -24,7 +24,7 @@ export default async function manifestLoader(source) {
     }
     for (let i = 0; i < parsedSrc.screenshots?.length; i++) {
         if (parsedSrc.screenshots[i]?.src) {
-            const promise = this.importModule(path.resolve(this.context, parsedSrc.icons[i].src)).catch((e) => {
+            const promise = this.importModule(path.resolve(this.context, parsedSrc.screenshots[i].src)).catch((e) => {
                 this.emitError(e);
             });
             srcRefs.push({promise, assignTo: parsedSrc.screenshots[i]});

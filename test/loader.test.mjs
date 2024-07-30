@@ -7,11 +7,11 @@ test('Outputs valid data', async () => {
     expect((() => JSON.parse(output))).not.toThrow();
 
     const parsed = JSON.parse(output);
-    expect(parsed.icons[0].src).toMatch(/^\/some-publicpath\/[a-f0-9]*\.png$/);
-    expect(parsed.icons[1].src).toMatch(/^\/some-publicpath\/[a-f0-9]*\.png$/);
-    expect(parsed.icons[2].src).toMatch(/^\/some-publicpath\/[a-f0-9]*\.svg$/);
+    expect(parsed.icons[0].src).toEqual('/some-publicpath/icon-72-processed.png');
+    expect(parsed.icons[1].src).toEqual('/some-publicpath/icon-180-processed.png');
+    expect(parsed.icons[2].src).toEqual('/some-publicpath/icon-svg-processed.svg');
 
-    expect(parsed.screenshots[0].src).toMatch(/^\/some-publicpath\/[a-f0-9]*\.png$/);
+    expect(parsed.screenshots[0].src).toEqual('/some-publicpath/screen-processed.png');
 });
 
 
