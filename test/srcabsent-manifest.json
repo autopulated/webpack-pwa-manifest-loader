@@ -1,0 +1,23 @@
+{
+  "name": "MyApp",
+  "short_name": "MyApp",
+  "description": "App description etc.",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "72x72"
+    }
+  ],
+  "screenshots" : [
+    {
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "An app screenshot"
+    }
+  ]
+}
+

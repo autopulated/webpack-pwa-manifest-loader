@@ -36,6 +36,7 @@ export default (fixture, options = {}) => {
 
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
+      /* istanbul ignore next */
       if (err) reject(err);
       else if (stats.hasErrors()) reject(stats.toJson().errors);
       else resolve(stats);
