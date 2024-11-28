@@ -1,5 +1,3 @@
-import path from 'node:path';
-
 // A simple loader to load image src URLs from manifest.json / .webmanifest files
 // Supports image src urls in:
 //  * .icons[].src
@@ -14,7 +12,7 @@ export default async function manifestLoader(source) {
     // collect promises for the laod of each src url:
     for (let i = 0; i < parsedSrc.icons?.length; i++) {
         if (parsedSrc.icons[i]?.src) {
-            const promise = this.importModule(path.resolve(this.context, parsedSrc.icons[i].src)).catch(() => {
+            const promise = this.importModule(parsedSrc.icons[i].src).catch(() => {
                 // importModule already emits the error (this.emitError). To avoid duplicate errors, catch it silently.
                 // this.emitError(e);
                 return parsedSrc.icons[i].src;
@@ -24,7 +22,7 @@ export default async function manifestLoader(source) {
     }
     for (let i = 0; i < parsedSrc.screenshots?.length; i++) {
         if (parsedSrc.screenshots[i]?.src) {
-            const promise = this.importModule(path.resolve(this.context, parsedSrc.screenshots[i].src)).catch(() => {
+            const promise = this.importModule(parsedSrc.screenshots[i].src).catch(() => {
                 // importModule already emits the error (this.emitError). To avoid duplicate errors, catch it silently.
                 // this.emitError(e);
                 return parsedSrc.screenshots[i].src;
