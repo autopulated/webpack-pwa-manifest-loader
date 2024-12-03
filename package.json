@@ -1,6 +1,6 @@
 {
   "name": "pwa-manifest-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Progressive Web App manifest.json / app.webmenifest loader for webpack.",
   "main": "index.mjs",
   "scripts": {
