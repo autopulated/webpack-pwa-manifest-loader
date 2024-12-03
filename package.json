@@ -38,11 +38,11 @@
   "homepage": "https://github.com/autopulated/webpack-pwa-manifest-loader#readme",
   "devDependencies": {
     "@eslint/js": "^9.8.0",
-    "eslint": "^9.8.0",
-    "eslint-plugin-jest": "^28.6.0",
-    "globals": "^15.8.0",
+    "eslint": "^9.16.0",
+    "eslint-plugin-jest": "^28.9.0",
+    "globals": "^15.13.0",
     "jest": "^29.7.0",
-    "memfs": "^4.11.0",
-    "webpack": "^5.93.0"
+    "memfs": "^4.14.1",
+    "webpack": "^5.97.0"
   }
 }

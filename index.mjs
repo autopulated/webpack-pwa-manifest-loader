@@ -12,7 +12,8 @@ export default async function manifestLoader(source) {
 
     // From webpack 5.96, importModule cannot load assets directly, so we need
     // this (see https://github.com/webpack/webpack/issues/18928)
-    const resolvedAssetLoader = resolve(import.meta.dirname, "./pwa-asset-loader.mjs");
+    // (import.meta.dirname is undefined when running tests)
+    const resolvedAssetLoader = resolve(import.meta.dirname || '.', './pwa-asset-loader.mjs');
 
     // collect promises for the laod of each src url:
     for (let i = 0; i < parsedSrc.icons?.length; i++) {
