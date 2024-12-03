@@ -44,7 +44,7 @@ export default async function manifestLoader(source) {
     // await them each in turn and assign results:
     for (const {promise, assignTo} of srcRefs) {
         const result = await promise;
-        logger.warn(`pwa-manifest-loader got ${result} for ${assignTo.src} in ${this.context}`);
+        logger.log(`pwa-manifest-loader got ${result} for ${assignTo.src} in ${this.context}`);
         assignTo.src = result;
     }
 
