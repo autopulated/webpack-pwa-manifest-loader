@@ -20,7 +20,8 @@
     "url": "git+ssh://git@github.com/autopulated/webpack-pwa-manifest-loader.git"
   },
   "files": [
-    "index.mjs"
+    "index.mjs",
+    "pwa-asset-loader.mjs"
   ],
   "keywords": [
     "webpack",

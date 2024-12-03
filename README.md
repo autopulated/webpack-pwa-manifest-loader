@@ -105,7 +105,8 @@ Apache-2.0
 Open a github issue please :)
 
 ## Changelog
- * **1.0.4** Fixed Support for Webpack >= 5.96
+ * **1.0.5** Fixed Support for Webpack >= 5.96
+ * 1.0.4 - broken release missing required asset loader
  * **1.0.3** Fixed Support for Resolving Aliases
  * **1.0.2** Fixed Support for Screenhots
  * **1.0.1** Added Test Coverage and Documentation
