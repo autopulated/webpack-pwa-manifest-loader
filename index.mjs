@@ -2,6 +2,7 @@
 // Supports image src urls in:
 //  * .icons[].src
 //  * .screenshots[].src
+import {resolve} from 'node:path';
 export default async function manifestLoader(source) {
     const parsedSrc = JSON.parse(source);
 
@@ -9,10 +10,14 @@ export default async function manifestLoader(source) {
 
     const srcRefs = [];
 
+    // From webpack 5.96, importModule cannot load assets directly, so we need
+    // this (see https://github.com/webpack/webpack/issues/18928)
+    const resolvedAssetLoader = resolve(import.meta.dirname, "./pwa-asset-loader.mjs");
+
     // collect promises for the laod of each src url:
     for (let i = 0; i < parsedSrc.icons?.length; i++) {
         if (parsedSrc.icons[i]?.src) {
-            const promise = this.importModule(parsedSrc.icons[i].src).catch(() => {
+            const promise = this.importModule(`!!${resolvedAssetLoader}!${parsedSrc.icons[i].src}`).catch(() => {
                 // importModule already emits the error (this.emitError). To avoid duplicate errors, catch it silently.
                 // this.emitError(e);
                 return parsedSrc.icons[i].src;
@@ -22,7 +27,7 @@ export default async function manifestLoader(source) {
     }
     for (let i = 0; i < parsedSrc.screenshots?.length; i++) {
         if (parsedSrc.screenshots[i]?.src) {
-            const promise = this.importModule(parsedSrc.screenshots[i].src).catch(() => {
+            const promise = this.importModule(`!!${resolvedAssetLoader}!${parsedSrc.screenshots[i].src}` ).catch(() => {
                 // importModule already emits the error (this.emitError). To avoid duplicate errors, catch it silently.
                 // this.emitError(e);
                 return parsedSrc.screenshots[i].src;
@@ -39,7 +44,7 @@ export default async function manifestLoader(source) {
     // await them each in turn and assign results:
     for (const {promise, assignTo} of srcRefs) {
         const result = await promise;
-        logger.log(`pwa-manifest-loader got ${result} for ${assignTo.src} in ${this.context}`);
+        logger.warn(`pwa-manifest-loader got ${result} for ${assignTo.src} in ${this.context}`);
         assignTo.src = result;
     }
 

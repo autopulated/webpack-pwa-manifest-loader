@@ -104,8 +104,14 @@ Apache-2.0
 ## Bugs etc?
 Open a github issue please :)
 
+## Changelog
+ * **1.0.4** Fixed Support for Webpack >= 5.96
+ * **1.0.3** Fixed Support for Resolving Aliases
+ * **1.0.2** Fixed Support for Screenhots
+ * **1.0.1** Added Test Coverage and Documentation
+ * **1.0** Initial Release
+
 ## My PWAs that use this
  * [DailyCodeword](https://dailycodeword.com): progressive web app for daily codeword puzzles.
  * [Summably](https://summably.com): daily number puzzle
-
 
